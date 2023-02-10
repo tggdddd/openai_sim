@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Demo.TVIew">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="525" height="467"/>
+    </constraints>
+    <properties>
+      <enabled value="false"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="8877b" binding="inputPanel" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <minimumSize width="524" height="100"/>
+        </properties>
+        <border type="empty" title="输入" title-justification="2"/>
+        <children>
+          <scrollpane id="f5feb">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0" ipadx="1" ipady="1"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="true"/>
+              <horizontalScrollBarPolicy value="30"/>
+              <preferredSize width="516" height="100"/>
+              <verticalScrollBarPolicy value="20"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="4247c" class="javax.swing.JTextArea" binding="question">
+                <constraints/>
+                <properties>
+                  <autoscrolls value="false"/>
+                  <lineWrap value="true"/>
+                  <minimumSize width="516" height="100"/>
+                  <rows value="0"/>
+                  <text value=""/>
+                  <toolTipText value="请输入问题"/>
+                  <wrapStyleWord value="true"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+        </children>
+      </grid>
+      <grid id="dfdbc" binding="outputPanel" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <minimumSize width="524" height="100"/>
+        </properties>
+        <border type="empty" title="输出【文本编辑的指令输入】" title-justification="2"/>
+        <children>
+          <scrollpane id="a99f4">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0" ipadx="1" ipady="1"/>
+            </constraints>
+            <properties>
+              <preferredSize width="516" height="100"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="dc005" class="javax.swing.JTextArea" binding="answer">
+                <constraints/>
+                <properties>
+                  <autoscrolls value="false"/>
+                  <lineWrap value="true"/>
+                  <minimumSize width="516" height="100"/>
+                  <wrapStyleWord value="true"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+        </children>
+      </grid>
+      <grid id="b0361" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="2" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties/>
+        <border type="empty"/>
+        <children>
+          <component id="5db85" class="javax.swing.JButton" binding="send">
+            <constraints/>
+            <properties>
+              <enabled value="true"/>
+              <text value="发送"/>
+            </properties>
+          </component>
+          <component id="79d2e" class="javax.swing.JButton" binding="selectFile">
+            <constraints/>
+            <properties>
+              <text value="选择文件"/>
+            </properties>
+          </component>
+          <component id="ff9d0" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+            <constraints/>
+            <properties>
+              <model>
+                <item value="文本回复"/>
+                <item value="文本编辑"/>
+                <item value="图片生成"/>
+                <item value="图片编辑"/>
+                <item value="相似图片"/>
+              </model>
+            </properties>
+          </component>
+          <component id="f94a3" class="javax.swing.JButton" binding="setting">
+            <constraints/>
+            <properties>
+              <text value="设置"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

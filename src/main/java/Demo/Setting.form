@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Demo.Setting">
+  <grid id="cbd77" binding="contentPane" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="48" y="54" width="1023" height="590"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="94766" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="9538f" layout-manager="GridBagLayout">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="e7465" class="javax.swing.JButton" binding="buttonOK">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="1.0" weighty="1.0"/>
+                </constraints>
+                <properties>
+                  <text value="确定"/>
+                </properties>
+              </component>
+              <component id="5723f" class="javax.swing.JButton" binding="buttonCancel">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="1.0" weighty="1.0"/>
+                </constraints>
+                <properties>
+                  <text value="取消"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="e3588" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties/>
+        <border type="none" title=""/>
+        <children>
+          <grid id="195c0" layout-manager="GridBagLayout">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties/>
+            <border type="empty" title="OPENAI_TOKEN（密钥）" title-justification="1" title-position="2"/>
+            <children>
+              <component id="44ee8" class="javax.swing.JTextField" binding="OPENAI_TOKEN">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <columns value="30"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="9d76e" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties/>
+            <border type="none" title="USER（密钥使用用户）"/>
+            <children>
+              <component id="982c3" class="javax.swing.JTextField" binding="USER">
+                <constraints/>
+                <properties>
+                  <columns value="30"/>
+                  <enabled value="true"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="28f6" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties/>
+            <border type="none" title="MODEL（模型）"/>
+            <children>
+              <component id="f2356" class="javax.swing.JComboBox" binding="MODEL">
+                <constraints/>
+                <properties>
+                  <editable value="true"/>
+                  <model>
+                    <item value="文本编辑："/>
+                    <item value="text-davinci-edit-001"/>
+                    <item value="code-davinci-edit-001"/>
+                    <item value="文本回复："/>
+                    <item value="babbage"/>
+                    <item value="davinci"/>
+                    <item value="text-embedding-ada-002"/>
+                    <item value="babbage-code-search-code"/>
+                    <item value="text-similarity-babbage-001"/>
+                    <item value="text-davinci-001"/>
+                    <item value="curie-instruct-beta"/>
+                    <item value="babbage-code-search-text"/>
+                    <item value="babbage-similarity"/>
+                    <item value="curie-search-query"/>
+                    <item value="code-search-babbage-text-001"/>
+                    <item value="code-cushman-001"/>
+                    <item value="code-search-babbage-code-001"/>
+                    <item value="audio-transcribe-deprecated"/>
+                    <item value="text-ada-001"/>
+                    <item value="text-similarity-ada-001"/>
+                    <item value="text-davinci-insert-002"/>
+                    <item value="text-davinci-003"/>
+                    <item value="ada-code-search-code"/>
+                    <item value="ada-similarity"/>
+                    <item value="code-search-ada-text-001"/>
+                    <item value="text-search-ada-query-001"/>
+                    <item value="text-curie-001"/>
+                    <item value="text-davinci-edit-001"/>
+                    <item value="davinci-search-document"/>
+                    <item value="ada-code-search-text"/>
+                    <item value="text-search-ada-doc-001"/>
+                    <item value="code-davinci-002"/>
+                    <item value="code-davinci-edit-001"/>
+                    <item value="davinci-instruct-beta"/>
+                    <item value="text-similarity-curie-001"/>
+                    <item value="code-search-ada-code-001"/>
+                    <item value="ada-search-query"/>
+                    <item value="text-search-davinci-query-001"/>
+                    <item value="ada"/>
+                    <item value="davinci-search-query"/>
+                    <item value="text-davinci-insert-001"/>
+                    <item value="babbage-search-document"/>
+                    <item value="ada-search-document"/>
+                    <item value="text-search-babbage-doc-001"/>
+                    <item value="text-search-curie-doc-001"/>
+                    <item value="text-search-curie-query-001"/>
+                    <item value="babbage-search-query"/>
+                    <item value="text-babbage-001"/>
+                    <item value="text-search-davinci-doc-001"/>
+                    <item value="text-search-babbage-query-001"/>
+                    <item value="curie-similarity"/>
+                    <item value="curie-search-document"/>
+                    <item value="curie"/>
+                    <item value="text-similarity-davinci-001"/>
+                    <item value="text-davinci-002"/>
+                    <item value="davinci-similarity"/>
+                    <item value="cushman:2020-05-03"/>
+                    <item value="ada:2020-05-03"/>
+                    <item value="babbage:2020-05-03"/>
+                    <item value="curie:2020-05-03"/>
+                    <item value="davinci:2020-05-03"/>
+                    <item value="if-davinci-v2"/>
+                    <item value="if-curie-v2"/>
+                    <item value="if-davinci:3.0.0"/>
+                    <item value="davinci-if:3.0.0"/>
+                    <item value="davinci-instruct-beta:2.0.0"/>
+                    <item value="text-ada:001"/>
+                    <item value="text-davinci:001"/>
+                    <item value="text-curie:001"/>
+                    <item value="text-babbage:001"/>
+                  </model>
+                  <toolTipText value="文本编辑：&#10;text-davinci-edit-001 &#10;code-davinci-edit-001"/>
+                </properties>
+                <clientProperties>
+                  <html.disable class="java.lang.Boolean" value="false"/>
+                </clientProperties>
+              </component>
+            </children>
+          </grid>
+          <grid id="f3019" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties/>
+            <border type="none" title="MAX_TOKENS（最大回复字数）"/>
+            <children>
+              <component id="b699" class="javax.swing.JTextField" binding="MAX_TOKENS">
+                <constraints/>
+                <properties>
+                  <columns value="30"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="2bb01" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties/>
+            <border type="none" title="TOP_P（高概率下落比  0-1）"/>
+            <children>
+              <component id="a6a04" class="javax.swing.JTextField" binding="TOP_P">
+                <constraints/>
+                <properties>
+                  <columns value="30"/>
+                  <editable value="true"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="d5c08" layout-manager="GridBagLayout">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties/>
+            <border type="empty" title="TEMPERATURE（变异比 0-1）" title-justification="1" title-position="2">
+              <title-color color="-16777216"/>
+            </border>
+            <children>
+              <component id="1ca20" class="javax.swing.JTextField" binding="TEMPERATURE">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <columns value="30"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="68dd" layout-manager="GridBagLayout">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties/>
+            <border type="empty" title="BEST_OF( 生成的版本数）" title-justification="1" title-position="2"/>
+            <children>
+              <component id="ce9d0" class="javax.swing.JTextField" binding="BEST_OF">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <columns value="30"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="9fe9c" layout-manager="GridBagLayout">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties/>
+            <border type="empty" title="SIZE（图片大小  256x256, 512x512,1024x1024）" title-justification="1" title-position="2"/>
+            <children>
+              <component id="6b437" class="javax.swing.JTextField" binding="SIZE">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <columns value="30"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="db0d6" layout-manager="GridBagLayout">
+            <constraints>
+              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties/>
+            <border type="empty" title="N（返回生成的版本数）" title-justification="1" title-position="2"/>
+            <children>
+              <component id="c0c35" class="javax.swing.JTextField" binding="N">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <columns value="30"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
