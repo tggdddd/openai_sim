@@ -35,22 +35,6 @@ public class TVIew {
     private static final String IAMGE_EDIT = "图片编辑";
     private static final String TEXT_EDIT = "文本编辑";
     private static String token = System.getenv("OPENAI_TOKEN");
-    private static OpenAiService service = new OpenAiService(token, Duration.ofMinutes(10));
-    private static String TEXT_GENERATION = "文本回复";
-    private static String PICTURE_GENERATION = "图片生成";
-    private File uploadImageFile;
-    private File upLoadImageMask;
-
-    private JPanel panel1;
-    Component self = this.$$$getRootComponent$$$();
-    private JButton send;
-    private JButton selectFile;
-    private JTextArea answer;
-    private JTextArea question;
-    private JButton setting;
-    private JComboBox comboBox1;
-    private JPanel outputPanel;
-    private JPanel inputPanel;
 
     public TVIew() {
         $$$setupUI$$$();
@@ -74,7 +58,7 @@ public class TVIew {
                             .user(Utils.properties.getProperty("USER"))
                             .n(Integer.valueOf(Utils.properties.getProperty("N")))
                             .build();
-                    service.createCompletion(completionRequest).getChoices().forEach(t ->
+                    getService().createCompletion(completionRequest).getChoices().forEach(t ->
                             stringBuilder
                                     .append("回答如下：\n")
                                     .append(t.getText())
@@ -94,7 +78,7 @@ public class TVIew {
                             .temperature(Double.valueOf(Utils.properties.getProperty("TEMPERATURE")))
                             .n(Integer.valueOf(Utils.properties.getProperty("N")))
                             .build();
-                    service.createEdit(editRequest).getChoices().forEach(t -> stringBuilder
+                    getService().createEdit(editRequest).getChoices().forEach(t -> stringBuilder
                             .append("回答如下：\n")
                             .append(t.getText())
                             .append("\n")
@@ -112,7 +96,7 @@ public class TVIew {
                             .n(Integer.valueOf(Utils.properties.getProperty("N")))
                             .build();
 
-                    List<Image> images = service.createImage(createImageRequest).getData();
+                    List<Image> images = getService().createImage(createImageRequest).getData();
                     if (images != null) {
                         showImageList(images);
                     }
@@ -125,7 +109,7 @@ public class TVIew {
                             .size(Utils.properties.getProperty("SIZE"))
                             .n(Integer.valueOf(Utils.properties.getProperty("N")))
                             .build();
-                    List<Image> images = service.createImageVariation(createImageVariationRequest, uploadImageFile).getData();
+                    List<Image> images = getService().createImageVariation(createImageVariationRequest, uploadImageFile).getData();
                     if (images != null) {
                         showImageList(images);
                     }
@@ -142,7 +126,7 @@ public class TVIew {
                             .prompt(text)
                             .n(Integer.valueOf(Utils.properties.getProperty("N")))
                             .build();
-                    List<Image> images = service.createImageEdit(createImageEditRequest, uploadImageFile, upLoadImageMask).getData();
+                    List<Image> images = getService().createImageEdit(createImageEditRequest, uploadImageFile, upLoadImageMask).getData();
                     if (images != null) {
                         showImageList(images);
                     }
@@ -181,6 +165,26 @@ public class TVIew {
             dialog.setLocationRelativeTo(self);
             dialog.setVisible(true);
         });
+    }
+
+    private static String TEXT_GENERATION = "文本回复";
+    private static String PICTURE_GENERATION = "图片生成";
+    private File uploadImageFile;
+    private File upLoadImageMask;
+
+    private JPanel panel1;
+    Component self = this.$$$getRootComponent$$$();
+    private JButton send;
+    private JButton selectFile;
+    private JTextArea answer;
+    private JTextArea question;
+    private JButton setting;
+    private JComboBox comboBox1;
+    private JPanel outputPanel;
+    private JPanel inputPanel;
+
+    public OpenAiService getService() {
+        return new OpenAiService(Utils.properties.getProperty("OPENAI_TOKEN"), Duration.ofMinutes(100));
     }
 
     /**
